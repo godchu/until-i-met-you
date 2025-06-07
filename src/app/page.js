@@ -1,55 +1,17 @@
-// import { FlipCountdown } from "@/components/flip-count-down";
+'use client'
 
-// export default function Home() {
-//   return (
-//     <div style={{ padding: '2rem' }}>
-//       <h2>Countdown Timer</h2>
-//       <FlipCountdown
-//          hideYear
-//          hideMonth
-//          theme='dark'
-//          size='large'
-//          titlePosition='bottom'
+import { FlipCountDown } from '@/features/countdown/v1/flip-count-down'
 
-//          endAt={new Date(
-//            Date.now() +
-//            1000 /* sec */ *
-//            60 /* min */ *
-//            60 /* hour */ *
-//            48 /* day */ *
-//            30 /* month */ *
-//            12 /* year */ *
-//            2
-//          ).toUTCString()}
-//          dayTitle='DAYS'
-//          hourTitle='HOURS'
-//          minuteTitle='MINUTES'
-//          secondTitle='SECONDS'
-//       />
-//     </div>
-//   );
-// }
-"use client"
-
-import FlipCountdown from "@rumess/react-flip-countdown";
-
-function App() {
+function HomePage() {
   return (
-
-    <FlipCountdown
-      theme='dark'
-      size='large'
-      titlePosition='top'
-      endAt={new Date('2026-02-09').toUTCString()}
-      dayTitle='DAYS'
-      hourTitle='HOURS'
-      minuteTitle='MINUTES'
-      secondTitle='SECONDS'
-      yearTitle='YEARS'
-
-    />
-        
-  );
+    <>
+      <FlipCountDown
+        title="Until I met you"
+        startTime={new Date()}
+        endTime={new Date('2026-09-02T00:00:00')}
+      />
+    </>
+  )
 }
 
-export default App;
+export default HomePage

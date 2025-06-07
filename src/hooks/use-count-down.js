@@ -31,7 +31,7 @@ export function getDHMS(timeDiff) {
 
 export const useCountDown = (
   time,
-  format = getHMSTime,
+  format = getDHMS,
   callback,
 ) => {
   const [remainTime, setRemainTime] = useState(time)
